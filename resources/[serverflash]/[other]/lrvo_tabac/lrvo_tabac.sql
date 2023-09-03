@@ -1,0 +1,3 @@
+INSERT INTO `items` (`item`, `label`, `limit`, `can_remove`, `type`, `usable`) VALUES ('feuille_tabac', 'feuille de tabac', '30', '1', 'item_standard', '1');
+INSERT INTO `items` (`item`, `label`, `limit`, `can_remove`, `type`, `usable`) VALUES ('tabac', 'Tabac blond', '30', '1', 'item_standard', '1');
+INSERT INTO `items` (`item`, `label`, `limit`, `can_remove`, `type`, `usable`) VALUES ('sac_tabac', 'sac de tabac', '10', '1', 'item_standard', '1');

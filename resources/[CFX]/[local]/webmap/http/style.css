@@ -1,0 +1,177 @@
+@font-face {
+	font-family: "Chinese Rocks";
+	src: url("rdr3/chineserocks.ttf");
+}
+
+@font-face {
+	font-family: "Pricedown";
+	src: url("gta5/pricedown.otf");
+}
+
+html, body {
+	width: 100vw;
+	height: 100vh;
+	padding: 0;
+	margin: 0;
+	font-family: Helvetica;
+}
+
+body {
+	background-color: #000;
+}
+
+a {
+	color: cornflowerblue;
+	text-decoration: none;
+}
+
+#map {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-size: 100% 100%;
+	overflow: hidden;
+}
+
+#server-name {
+	position: absolute;
+	bottom: 3%;
+	left: 50%;
+	transform: translate(-50%, 0);
+	color: white;
+	background-color: rgba(0, 0, 0, 0.5);
+	padding: 0.5vh 0.5vw;
+	font-size: 2.5vh;
+}
+
+#info {
+	display: flex;
+	flex-flow: column;
+	position: absolute;
+	top: 3%;
+	left: 3%;
+	background-color: rgba(0, 0, 0, 0.5);
+	padding: 1vh 1vw;
+	color: white;
+}
+
+#weather-container {
+	font-size: 1.7vh;
+}
+
+#time, #weather, #wind {
+	display: inline-block;
+}
+
+#wind {
+	font-size: 75%;
+}
+
+#tab-bar {
+	padding-top: 1vh;
+	display: flex;
+	gap: 0.5vh 0.5vw;
+}
+
+.tab-button {
+	background: none;
+	border: none;
+	color: rgba(255, 255, 255, 0.5);
+	font-size: 2.5vh;
+	padding: 0;
+	border-bottom: solid 1px rgba(0, 0, 0, 0);
+}
+
+.tab-button:active, .tab-button:hover, .tab-button:focus {
+	border-bottom: 1px solid white;
+}
+
+.tab-button.active {
+	color: white;
+	border-bottom: 1px solid red;
+}
+
+.tab {
+	padding-top: 0.5vh;
+}
+
+#player-list {
+	display: grid;
+	grid-template-columns: repeat(3, max-content);
+	grid-gap: 1vh 1vw;
+	font-size: 1.5vh;
+	padding-top: 1vh;
+}
+
+.player {
+	display: contents;
+}
+
+.player-id {
+	text-align: right;
+}
+
+.player-name, .player-health {
+	white-space: nowrap;
+}
+
+.player-health {
+	display: grid;
+	grid-template-columns: repeat(2, max-content);
+	grid-gap: 0.25em;
+	align-items: baseline;
+	text-align: right;
+}
+
+.blip {
+	background-image: url("blip.svg");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	position: absolute;
+	width: 1vw;
+	height: 1vw;
+}
+
+.blip.dead {
+	background-image: url("blip_dead.svg");
+}
+
+.blip.pin {
+	background-image: url("blip_pin.svg");
+	width: 1.5vw;
+	height: 1.5vw;
+}
+
+.blip-tag {
+	position: absolute;
+	transform: translate(-100%, -100%);
+	color: white;
+	background-color: rgba(0, 0, 0, 0.5);
+	font-size: 1.5vh;
+	padding: 0.25vh 0.25vw;
+	display: grid;
+	grid-template-columns: auto auto;
+	grid-gap: 0.5vh 0.5vw;
+}
+
+#forecast {
+	display: grid;
+	grid-template-columns: repeat(4, max-content);
+	grid-gap: 0.25vh 0.5vw;
+	align-items: baseline;
+	font-size: 1.7vh;
+	text-align: right;
+}
+
+.forecast-wind {
+	font-size: 75%;
+	text-align: left;
+}
+
+#coords {
+	position: absolute;
+	right: 3%;
+	bottom: 3%;
+	font-size: 1.25vh;
+}

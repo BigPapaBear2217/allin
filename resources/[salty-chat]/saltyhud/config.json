@@ -1,0 +1,8 @@
+{
+  "Enabled": true,
+  "RangeModifier": 1.0,
+  "RangeText": "{voicerange} mètres",
+  "RadioText": "Channel {channel}",
+  "HideWhilePauseMenuOpen": true,
+  "Position": [0, 0]
+}

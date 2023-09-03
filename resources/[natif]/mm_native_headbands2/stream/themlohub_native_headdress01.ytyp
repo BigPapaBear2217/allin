@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CMapTypes>
+ <extensions />
+ <archetypes>
+  <Item type="CBaseArchetypeDef">
+   <lodDist value="60" />
+   <flags value="0" />
+   <specialAttribute value="0" />
+   <bbMin x="-0.08746696" y="-0.174508631" z="-0.140899479" />
+   <bbMax x="0.1316487" y="0.174461961" z="0.250368148" />
+   <bsCentre x="0.02209087" y="-2.33352184E-05" z="0.0547343343" />
+   <bsRadius value="0.284113765" />
+   <hdTextureDist value="40" />
+   <name>themlohub_native_headdress01</name>
+   <textureDictionary>themlohub_native_headdress01</textureDictionary>
+   <clipDictionary />
+   <drawableDictionary />
+   <physicsDictionary />
+   <assetType>ASSET_TYPE_DRAWABLE</assetType>
+   <assetName>themlohub_native_headdress01</assetName>
+   <extensions />
+  </Item>
+ </archetypes>
+ <name>themlohub_native_headdress01</name>
+ <dependencies />
+ <compositeEntityTypes itemType="CCompositeEntityType" />
+</CMapTypes>

@@ -1,0 +1,9 @@
+<1.0>
+- First release
+* Features
+-- Large Object Rendering
+-- Small Object Rendering
+-- Telport in the scene
+-- Teleport out of the scene
+-- Self Cleaning on Stop 
+-- Story Mode

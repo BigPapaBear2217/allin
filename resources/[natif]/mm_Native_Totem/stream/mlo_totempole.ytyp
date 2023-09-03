@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CMapTypes>
+ <extensions />
+ <archetypes>
+  <Item type="CBaseArchetypeDef">
+   <lodDist value="60" />
+   <flags value="0" />
+   <specialAttribute value="0" />
+   <bbMin x="-0.9842807" y="-0.325293779" z="-0.34816888" />
+   <bbMax x="0.9842807" y="0.325293332" z="5.016174" />
+   <bsCentre x="0" y="-2.23517418E-07" z="2.33400249" />
+   <bsRadius value="2.875529" />
+   <hdTextureDist value="40" />
+   <name>mlo_totempole</name>
+   <textureDictionary>mlo_totempole</textureDictionary>
+   <clipDictionary />
+   <drawableDictionary />
+   <physicsDictionary>mlo_totempole</physicsDictionary>
+   <assetType>ASSET_TYPE_DRAWABLE</assetType>
+   <assetName>mlo_totempole</assetName>
+   <extensions />
+  </Item>
+ </archetypes>
+ <name>mlo_totempole</name>
+ <dependencies />
+ <compositeEntityTypes itemType="CCompositeEntityType" />
+</CMapTypes>

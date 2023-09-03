@@ -1,0 +1,33 @@
+--------------
+--* Config *--
+--------------
+--| Discord API (https://discord.com/developers/applications/) (uniquement des chiffres pas de parenthèse)
+DiscordAPI = 
+--| Nom du serveur
+ServeurName = "Wanted Nation"
+--| Lien du discord
+local Discord = "https://discord.gg/TNJmGd3bGN"
+--| Lien du Topserveur
+local TopServeur = "https://top-serveurs.net/rdr/wanted-nation"
+
+--------------
+--* Script *--
+--------------
+
+Citizen.CreateThread(function()
+	while true do
+        local PlayerName = GetPlayerName(PlayerId())
+        local id = GetPlayerServerId(PlayerId())
+		
+		SetDiscordAppId(DiscordAPI)
+		
+        SetRichPresence(" ["..id.."] - " .. PlayerName) 
+		
+		SetDiscordRichPresenceAsset('LargeIcon')
+        SetDiscordRichPresenceAssetText(ServeurName)
+        SetDiscordRichPresenceAction(0, "Discord", Discord)
+        SetDiscordRichPresenceAction(1, "Top Serveur", TopServeur)
+
+		Citizen.Wait(60000)
+	end
+end)

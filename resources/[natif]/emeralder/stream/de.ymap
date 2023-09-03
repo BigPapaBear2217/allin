@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<CMapData>
+	<flags value="2"/>
+	<contentFlags value="65"/>
+	<streamingExtentsMin x="951.749878" y="-152.527725" z="-311.539124"/>
+	<streamingExtentsMax x="1788.813965" y="659.944550" z="489.198029"/>
+	<entitiesExtentsMin x="1351.749878" y="247.472275" z="88.460876"/>
+	<entitiesExtentsMax x="1388.813965" y="259.944550" z="89.198029"/>
+	<entities>
+		<Item type="CEntityDef">
+			<archetypeName>mp001_p_mp_jump_haybaleshort01</archetypeName>
+			<flags value="1572897"/>
+			<position x="1388.813965" y="249.424515" z="88.993965"/>
+			<rotation w="0.756859" x="0.038200" y="0.034715" z="0.651537"/>
+			<scaleXY value="1"/>
+			<scaleZ value="1"/>
+			<parentIndex value="-1"/>
+			<lodDist value="500"/>
+			<childLodDist value="500"/>
+			<lodLevel>LODTYPES_DEPTH_HD</lodLevel>
+			<numChildren value="0"/>
+			<ambientOcclusionMultiplier value="255"/>
+			<artificialAmbientOcclusion value="255"/>
+		</Item>
+		<Item type="CEntityDef">
+			<archetypeName>mp001_p_mp_jump_haybalelong01</archetypeName>
+			<flags value="1572897"/>
+			<position x="1374.876099" y="247.472275" z="89.198029"/>
+			<rotation w="0.778664" x="0.014913" y="0.041915" z="0.625862"/>
+			<scaleXY value="1"/>
+			<scaleZ value="1"/>
+			<parentIndex value="-1"/>
+			<lodDist value="500"/>
+			<childLodDist value="500"/>
+			<lodLevel>LODTYPES_DEPTH_HD</lodLevel>
+			<numChildren value="0"/>
+			<ambientOcclusionMultiplier value="255"/>
+			<artificialAmbientOcclusion value="255"/>
+		</Item>
+		<Item type="CEntityDef">
+			<archetypeName>mp001_p_mp_jump_haybaleshort01</archetypeName>
+			<flags value="1572897"/>
+			<position x="1351.749878" y="259.944550" z="88.460876"/>
+			<rotation w="0.940394" x="0.054312" y="0.114127" z="-0.315729"/>
+			<scaleXY value="1"/>
+			<scaleZ value="1"/>
+			<parentIndex value="-1"/>
+			<lodDist value="500"/>
+			<childLodDist value="500"/>
+			<lodLevel>LODTYPES_DEPTH_HD</lodLevel>
+			<numChildren value="0"/>
+			<ambientOcclusionMultiplier value="255"/>
+			<artificialAmbientOcclusion value="255"/>
+		</Item>
+		<Item type="CEntityDef">
+			<archetypeName>mp001_p_mp_jump_haybaleshort01</archetypeName>
+			<flags value="1572897"/>
+			<position x="1362.547974" y="250.166245" z="88.873611"/>
+			<rotation w="0.854475" x="-0.038146" y="0.063243" z="-0.514215"/>
+			<scaleXY value="1"/>
+			<scaleZ value="1"/>
+			<parentIndex value="-1"/>
+			<lodDist value="500"/>
+			<childLodDist value="500"/>
+			<lodLevel>LODTYPES_DEPTH_HD</lodLevel>
+			<numChildren value="0"/>
+			<ambientOcclusionMultiplier value="255"/>
+			<artificialAmbientOcclusion value="255"/>
+		</Item>
+	</entities>
+</CMapData>

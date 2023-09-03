@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<CMapData>
+	<flags value="2"/>
+	<contentFlags value="65"/>
+	<streamingExtentsMin x="981.708374" y="-7330.485840" z="-339.689999"/>
+	<streamingExtentsMax x="1781.708374" y="-6530.485840" z="460.310001"/>
+	<entitiesExtentsMin x="1381.708374" y="-6930.485840" z="60.310001"/>
+	<entitiesExtentsMax x="1381.708374" y="-6930.485840" z="60.310001"/>
+	<entities>
+		<Item type="CEntityDef">
+			<archetypeName>p_fencetall_05e</archetypeName>
+			<flags value="1572897"/>
+			<position x="1381.708374" y="-6930.485840" z="60.310001"/>
+			<rotation w="0.948324" x="-0.000000" y="0.000000" z="0.317305"/>
+			<scaleXY value="1"/>
+			<scaleZ value="1"/>
+			<parentIndex value="-1"/>
+			<lodDist value="500"/>
+			<childLodDist value="500"/>
+			<lodLevel>LODTYPES_DEPTH_HD</lodLevel>
+			<numChildren value="0"/>
+			<ambientOcclusionMultiplier value="255"/>
+			<artificialAmbientOcclusion value="255"/>
+		</Item>
+	</entities>
+</CMapData>

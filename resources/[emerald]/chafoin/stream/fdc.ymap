@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<CMapData>
+	<flags value="2"/>
+	<contentFlags value="65"/>
+	<streamingExtentsMin x="1021.466431" y="-64.718018" z="-312.687645"/>
+	<streamingExtentsMax x="1821.712036" y="738.792542" z="487.470001"/>
+	<entitiesExtentsMin x="1421.466431" y="335.281982" z="87.312355"/>
+	<entitiesExtentsMax x="1421.712036" y="338.792542" z="87.470001"/>
+	<entities>
+		<Item type="CEntityDef">
+			<archetypeName>p_bench_log04x</archetypeName>
+			<flags value="1572897"/>
+			<position x="1421.712036" y="338.792542" z="87.312355"/>
+			<rotation w="0.998812" x="0.022169" y="0.043392" z="0.000389"/>
+			<scaleXY value="1"/>
+			<scaleZ value="1"/>
+			<parentIndex value="-1"/>
+			<lodDist value="500"/>
+			<childLodDist value="500"/>
+			<lodLevel>LODTYPES_DEPTH_HD</lodLevel>
+			<numChildren value="0"/>
+			<ambientOcclusionMultiplier value="255"/>
+			<artificialAmbientOcclusion value="255"/>
+		</Item>
+		<Item type="CEntityDef">
+			<archetypeName>p_bench_log03x</archetypeName>
+			<flags value="1572897"/>
+			<position x="1421.466431" y="335.281982" z="87.470001"/>
+			<rotation w="0.011453" x="0.000000" y="-0.000000" z="-0.999934"/>
+			<scaleXY value="1"/>
+			<scaleZ value="1"/>
+			<parentIndex value="-1"/>
+			<lodDist value="500"/>
+			<childLodDist value="500"/>
+			<lodLevel>LODTYPES_DEPTH_HD</lodLevel>
+			<numChildren value="0"/>
+			<ambientOcclusionMultiplier value="255"/>
+			<artificialAmbientOcclusion value="255"/>
+		</Item>
+		<Item type="CEntityDef">
+			<archetypeName>p_campfirenosmoke01x</archetypeName>
+			<flags value="1572897"/>
+			<position x="1421.697754" y="336.903748" z="87.408096"/>
+			<rotation w="0.999989" x="0.000000" y="-0.000000" z="-0.004695"/>
+			<scaleXY value="1"/>
+			<scaleZ value="1"/>
+			<parentIndex value="-1"/>
+			<lodDist value="500"/>
+			<childLodDist value="500"/>
+			<lodLevel>LODTYPES_DEPTH_HD</lodLevel>
+			<numChildren value="0"/>
+			<ambientOcclusionMultiplier value="255"/>
+			<artificialAmbientOcclusion value="255"/>
+		</Item>
+	</entities>
+</CMapData>

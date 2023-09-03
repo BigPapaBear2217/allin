@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<CMapData>
+	<flags value="2"/>
+	<contentFlags value="65"/>
+	<streamingExtentsMin x="-3056.980713" y="-1866.223267" z="-255.399994"/>
+	<streamingExtentsMax x="-2256.980713" y="-1066.223267" z="544.600006"/>
+	<entitiesExtentsMin x="-2656.980713" y="-1466.223267" z="144.600006"/>
+	<entitiesExtentsMax x="-2656.980713" y="-1466.223267" z="144.600006"/>
+	<entities>
+		<Item type="CEntityDef">
+			<archetypeName>p_campfire05x</archetypeName>
+			<flags value="1572897"/>
+			<position x="-2656.980713" y="-1466.223267" z="144.600006"/>
+			<rotation w="0.888491" x="0.042504" y="-0.021957" z="0.456393"/>
+			<scaleXY value="1"/>
+			<scaleZ value="1"/>
+			<parentIndex value="-1"/>
+			<lodDist value="500"/>
+			<childLodDist value="500"/>
+			<lodLevel>LODTYPES_DEPTH_HD</lodLevel>
+			<numChildren value="0"/>
+			<ambientOcclusionMultiplier value="255"/>
+			<artificialAmbientOcclusion value="255"/>
+		</Item>
+	</entities>
+</CMapData>

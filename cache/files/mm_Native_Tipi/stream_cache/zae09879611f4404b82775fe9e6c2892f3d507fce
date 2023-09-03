@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CMapTypes>
+ <extensions />
+ <archetypes>
+  <Item type="CBaseArchetypeDef">
+   <lodDist value="60" />
+   <flags value="0" />
+   <specialAttribute value="0" />
+   <bbMin x="-3.48291" y="-3.339844" z="-0.281269073" />
+   <bbMax x="3.447754" y="3.672363" z="9.98338" />
+   <bsCentre x="-0.0175780058" y="0.166259527" z="4.85105562" />
+   <bsRadius value="7.11632252" />
+   <hdTextureDist value="40" />
+   <name>themlohub_tipi_01</name>
+   <textureDictionary>themlohub_tipi_textures</textureDictionary>
+   <clipDictionary />
+   <drawableDictionary />
+   <physicsDictionary>themlohub_tipi_01</physicsDictionary>
+   <assetType>ASSET_TYPE_DRAWABLE</assetType>
+   <assetName>themlohub_tipi_01</assetName>
+   <extensions />
+  </Item>
+  <Item type="CBaseArchetypeDef">
+   <lodDist value="60" />
+   <flags value="0" />
+   <specialAttribute value="0" />
+   <bbMin x="-3.48291" y="-3.339844" z="-0.281269073" />
+   <bbMax x="3.447754" y="3.672363" z="9.98338" />
+   <bsCentre x="-0.0175780058" y="0.166259527" z="4.85105562" />
+   <bsRadius value="7.11632252" />
+   <hdTextureDist value="40" />
+   <name>themlohub_tipi_02</name>
+   <textureDictionary>themlohub_tipi_textures</textureDictionary>
+   <clipDictionary />
+   <drawableDictionary />
+   <physicsDictionary>themlohub_tipi_02</physicsDictionary>
+   <assetType>ASSET_TYPE_DRAWABLE</assetType>
+   <assetName>themlohub_tipi_02</assetName>
+   <extensions />
+  </Item>
+  <Item type="CBaseArchetypeDef">
+   <lodDist value="60" />
+   <flags value="0" />
+   <specialAttribute value="0" />
+   <bbMin x="2.214844" y="-0.4111328" z="0.03318405" />
+   <bbMax x="3.339844" y="1.364746" z="1.6215632" />
+   <bsCentre x="2.777344" y="0.476806581" z="0.8273736" />
+   <bsRadius value="1.317414" />
+   <hdTextureDist value="40" />
+   <name>themlohub_tipi_02_door</name>
+   <textureDictionary>themlohub_tipi_textures</textureDictionary>
+   <clipDictionary />
+   <drawableDictionary />
+   <physicsDictionary>themlohub_tipi_02_door</physicsDictionary>
+   <assetType>ASSET_TYPE_DRAWABLE</assetType>
+   <assetName>themlohub_tipi_02_door</assetName>
+   <extensions />
+  </Item>
+ </archetypes>
+ <name>themlohub_tipi_ytyp</name>
+ <dependencies />
+ <compositeEntityTypes itemType="CCompositeEntityType" />
+</CMapTypes>

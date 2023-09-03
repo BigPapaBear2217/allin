@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="index.css" type="text/css">
+
+    <!-- <script src="nui://game/ui/jquery.js" type="text/javascript"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/web-animations/2.3.1/web-animations.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/muuri/0.5.3/muuri.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+
+<body>
+  <div id="breederStore"></div>
+  <div id="openAdmin">
+  </div>
+  <div id="statusTable">
+    <div id="genderStatus"></div>
+    <div id="accStatus"></div>
+    <div id="speedStatus"></div>
+    <div id="turnStatus"></div>
+  </div>
+  <div id="statusTableWild">
+    <div id="accStatusWild"></div>
+    <div id="speedStatusWild"></div>
+    <div id="turnStatusWild"></div>
+  </div>
+  <div id="TransferToCity">
+  </div>
+  <div id="horseManage">
+    <div class="gridManageBags" id="gridManageBags"></div>
+    <div class="gridManageComp" id="gridManageComp"></div>
+  </div>
+  <div id="addonManage">
+    <div id="title">Uložiště 5/100</div>
+    <div class="gridAddonInventory" id="gridAddonInventory"></div>
+  </div>
+  <div id="spotManage">
+    <h2 id="title_stables" style="text-align:center">Spot</h2>
+    <div class="gridSpot" id="gridData" ></div>
+    <div id="description"></div>
+  </div>
+  <div id="horse_store">
+    <h2 id="title_stables" style="text-align:center">Stáje</h2>
+    </br>
+    <div class="grid0" id="horseData" >
+    </div>
+    <div id="MoneyIco"></div>
+    <div id="Money">10$</div>
+    <div id="GoldIco"></div>
+    <div id="Gold">10</div>
+    <div id="StorageIco"></div>
+    <div id="Storage">10</div>
+  
+    <div class="turn" id="turn"></div>
+    <div class="speed" id="speed"></div>
+    <div class="acc" id="acc"></div>
+    <div class="state" id="state"></div>
+  
+    <div id="Year">Age : 10</div>
+    <div id="Exp">Exp : 1000</div>
+    <div id="Gender">Gender : Female</div>
+    <div id ="Breed">Breed : Yes</div>
+
+    <div class="grid6">
+      <div class="button" id="skills2"><center>Skills : 1 lv / 1x Shoe</center>
+        <input type="range" min="0" max="6" value="0" class="slider" id="skills">
+      </div>
+      <div id="buy_agility" onclick="BuyAgility()"><center>Make agility</center></div>
+    </div>
+    <div class="grid1" id="cartData">
+    </div>
+    <div class="grid2" id="MyHorseData">
+    </div>
+    <div class="grid3" id="MyCartData">
+    </div>
+    <div class="grid4" id="MyCompData">
+      <div class="button" id="button1"><center>Blankets : 0.55$</center>
+        <input type='range' min='0' max='1' value='0' class='slider' id='saddlecloths'>
+      </div>
+      <div class="button" id="button2"><center>Saddles : 12.50$</center>
+        <input type="range" min="0" max="1" value="0" class="slider" id="saddles">
+      </div>
+      <div class="button" id="button3"><center>Horns : 0.55$</center>
+        <input type="range" min="0" max="1" value="0" class="slider" id="acshorn">
+      </div>
+      <div class="button" id="button4"><center>Stirrups : 0.55$</center>
+        <input type="range" min="0" max="1" value="0" class="slider" id="stirrups">
+      </div>
+      <div class="button" id="button5"><center>Bags : 10$</center>
+        <input type="range" min="0" max="1" value="0" class="slider" id="bags">
+      </div>
+      <div class="button" id="button6"><center>Bedrolls : 0.55$</center>
+        <input type="range" min="0" max="1" value="0" class="slider" id="acsluggage">
+      </div>
+      <div class="button" id="button7"><center>Lantern : 5.90$</center>
+        <input type="range" min="0" max="1" value="0" class="slider" id="lantern">
+      </div>
+      <div class="button" id="button8"><center>Mask : 9.95$</center>
+        <input type="range" min="0" max="1" value="0" class="slider" id="Mask">
+      </div>
+      <div class="button" id="button9"><center>Tails : 0.20$</center>
+        <input type="range" min="0" max="1" value="0" class="slider" id="tails">
+      </div>
+      <div class="button" id="button10"><center>Manes : 0.20$</center>
+        <input type="range" min="0" max="1" value="0" class="slider" id="manes">
+      </div>
+      <div class="button" id="button11"><center>Mustaches : 0.10$</center>
+        <input type="range" min="0" max="1" value="0" class="slider" id="mustache">
+      </div>
+      <div class="button" id="button12"><center>Holsters : 0.10$</center>
+        <input type="range" min="0" max="1" value="0" class="slider" id="holster">
+      </div>
+      <div class="button" id="button13"><center>Bridles : 5.55$</center>
+        <input type="range" min="0" max="1" value="0" class="slider" id="bridle">
+      </div>
+      <div class="button" id="button14"><center>Propsdata : 5.55$</center>
+        <input type="range" min="0" max="1" value="0" class="slider" id="propsData">
+      </div></br></br>
+      
+      <div id="buy_compos" onclick="BuyComponents()"><center>Buy components</center></div>
+      </div>
+      <div class="grid5" id="MyCartComp">
+      </div>
+      <div class="grid7" id="MyBreedComp">
+      </div>
+
+    <div id="MenuApi">
+      <div class="horse_store_button" id="horse_store_button1" onclick="HorseStoreMenu()">Horse store</div>
+      <div class="horse_store_button" id="horse_store_button2" onclick="CartStoreMenu()">Cart store</div>
+      <div class="horse_store_button" id="horse_store_button3" onclick="MyHorseMenu()">My horses</div>
+      <div class="horse_store_button" id="horse_store_button4" onclick="MyCartMenu()">My cart</div>
+      <div class="horse_store_button" id="horse_store_button5" onclick="HorseComponents()">Horse components</div>
+      <div class="horse_store_button" id="horse_store_button6" onclick="CartComponents()">Cart components</div>
+      <div class="horse_store_button" id="horse_store_button7" onclick="HorseShoes()">Horse shoes</div>
+      <div class="horse_store_button" id="horse_store_button8" onclick="Breeding()">Breeding horses</div>
+    </div>
+    <div id="TransferApi">
+    </div>
+  </div>
+
+  <script>
+  
+  </script>
+    <script src="./index.js" type="text/javascript"></script>
+  </body>
+
+</html>

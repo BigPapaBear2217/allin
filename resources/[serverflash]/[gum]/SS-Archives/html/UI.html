@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/materialize.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    <script src="assets/js/jquery.js" type="text/javascript"></script>
+    <script src="assets/js/materialize.js" type="text/javascript"></script>
+    <script src="assets/js/init.js" type="text/javascript"></script>
+  </head>
+<body>
+
+<div id="wrapper" class="home">
+    
+<div id="book">
+    
+		<div id="stack">
+        	<a id="blog-paper">
+          		<h2 id="DOSSIERS"></h2>
+        	</a>
+		</div>
+    
+		<div id="back-cover" class="cover"></div>
+    
+        <div id="home-contact">
+          <a id="card" class="card">
+          	<h2 id="contact-line"></h2>
+          </a>
+        </div>
+    
+<div id="paper-front" class="paper">
+	<div id="INFOTABLE">
+		<h1>AAAAAAA</h1>
+            <table class="centered" id="table1"> 
+            	<thead>
+          			<tr>
+              		<th>DATE</th>
+              		<th>DOSSIER</th>
+              		<th>NAME</th>
+          			</tr>
+        		</thead>
+               <tbody>
+               </tbody>
+             </table>
+	</div>
+    
+    <div id="PROPERTY">
+		<h1>AAAAAAA</h1>
+            <table class="centered" id="table1"> 
+            	<thead>
+          			<tr>
+              		<th>PROPERTY</th>
+              		<th>FIRSTNAME</th>
+              		<th>LASTNAME</th>
+          			</tr>
+        		</thead>
+               <tbody>
+               </tbody>
+             </table>
+	</div>
+    
+	<div id="SEARCH">
+		<h1></h1>
+        
+		<form class="col s12">
+		<div class="row">
+            
+                <div class="input-field col s6">
+                  <p for="firstname-search" id="SFIRTSTNAME"></p>
+                  <input id="firstname-search" type="text" class="validate">
+                  <span class="helper-text" data-error="wrong" data-success="right" >Cauta dupa nume...</span>
+                </div>
+            
+                <div class="input-field col s6">
+                  <p for="lastname-search" id="SLASTNAME"></p>
+                  <input id="lastname-search" type="text" class="validate">
+                  <span class="helper-text" data-error="wrong" data-success="right">Cauta dupa prenume...</span>
+                </div>
+            
+                <div class="input-field col s6">
+                  <p for="dob-search" id="SDOB"></p>
+                  <input id="dob-search" type="text" class="validate">
+                  <span class="helper-text" data-error="wrong" data-success="right">Cauta dupa data de nastere...</span>
+                </div>
+            
+                <div class="input-field col s6">
+                  <p for="offense-search" id="SDOSSIER">Dosar ID</p>
+                  <input id="offense-search" type="text" class="validate">
+				  <span class="helper-text" data-error="wrong" data-success="right">Cauta dupa dosar...</span>
+                </div>
+            
+		</div>
+		</form>
+	</div>
+    
+    <div id="SEARCHRESULT">
+        <h1></h1>
+        
+            <table class="centered">
+            	<thead>
+          			<tr>
+              		<th>FIRSTNAME</th>
+              		<th>LASTNAME</th>
+              		<th>DOB</th>
+          			</tr>
+        		</thead>
+               <tbody>
+               </tbody>
+             </table>
+             <p>Searching...</p>
+	</div>
+    
+    <div id="DOSSIERUSER">
+        <h1></h1>
+    	<div id="BOXINFO" class="SEARCHCLASS">
+			<div id="basic-info">
+            	<img src="assets/images/male.png" alt="avatar" draggable="false" class="avatar" onerror="src='assets/images/nophoto.png'"/>
+            	<ul>
+                <li id="d-citizen"></li>
+              	<li id="d-udob"></li>
+              	<li id="d-sex"></li>
+              	<li id="d-height"></li>                
+              	<li id="d-weight"></li>  
+              	<li id="d-eyecolor"></li> 
+              	<li id="d-haircolor"></li>              
+              	<li id="d-allfines"></li>
+              	<li id="d-registered"></li> 
+              	<li id="d-city"></li> 
+             	<div id="BOXRECORDS" class="BOXRECORDS">
+        			<p id="UDOSSIERS"></p>
+        		</div>
+            	</ul>
+                
+          	</div>
+            <table class="centered" cellspacing="0" cellpadding="0">
+                <thead>
+          			<tr>
+              		<th>DATE</th>
+              		<th>DOSSIER</th>
+              		<th>CHARGE</th>
+                    <th>FINE</th>
+          			</tr>
+        		</thead>
+               <tbody>
+               </tbody>
+             </table>
+        </div>
+	</div>
+    
+    <div id="ADDDOSSIER">
+        <h1>ADAUGA DOSAR</h1>
+        <p class="error">Error - No person was found, first name, last name or dob could be wrong</p>
+		<form class="col s12">
+		<div class="row">
+            
+                <div class="input-field col s6">
+                  <p for="offense-search" id="ADOSSIER"></p>
+                  <input id="charge-add" type="text" class="validate" required>
+				  <span class="helper-text" data-error="wrong" data-success="right">Crime / Fine...</span>
+                </div>
+            
+                <div class="input-field col s6">
+                  <p for="offense-search" id="AJAIL"></p>
+                  <input id="jail-add" type="number" value="0" class="validate" required>
+				  <span class="helper-text" data-error="wrong" data-success="right">Jail time ?</span>
+                </div>
+            
+                <div class="input-field col s6">
+                  <p for="offense-search" id="AFINE"></p>
+                  <input id="fine-add" type="number" value="0" class="validate" required>
+				  <span class="helper-text" data-error="wrong" data-success="right">Fine amount ?</span>
+                </div>
+            
+                <div class="input-field col s6">
+                  <p for="offense-search" id="ABOUNTY"></p>
+                  <input id="bounty-add" type="number" value="0" class="validate" required>
+					<span class="helper-text" data-error="wrong" data-success="right">Bounty Amount ?</span>
+                </div> 
+            
+            	<div class="input-field col s6">
+                	<p for="autojail">
+      					<label>
+        					<input type="checkbox" class="filled-in" id="auto-jail" value="autojail"/>
+        					<span class="helper-text" data-error="wrong" data-success="right">AUTO JAIL ?</span>
+                            <span class="helper-text" data-error="wrong" data-success="right">Send it directly to Sisika Penitentiary !</span>
+      					</label>
+    				</p>
+            	</div>
+                <div class="input-field col s6">
+                	<p for="penal">
+      					<label>
+        					<input type="checkbox" class="filled-in" id="penal" value="penal"/>
+        					<span class="helper-text" data-error="wrong" data-success="right">PENAL ?</span>
+                            <span class="helper-text" data-error="wrong" data-success="right">If NO PENAL will remove once payed the fine!</span>
+      					</label>
+    				</p>
+            	</div>
+            
+        		<div class="input-field col s12">
+                    <p for="offense-search" id="ADESCRIPTION"></p>
+          			<textarea id="description-add" class="materialize-textarea" required></textarea>
+                    <span class="helper-text" data-error="wrong" data-success="right">Descrie fapta...</span>
+        		</div>
+		</div>
+		</form>
+        <div>
+        </div>
+	</div>
+    
+    <div id="DOSSIERPAGE">
+    	<h1></h1>
+    	<div id="BOXINFO" class="SEARCHCLASS">
+			<div id="basic-info">
+            	<img src="assets/images/male.png" alt="avatar" draggable="false" class="avatar" onerror="src='assets/images/nophoto.png'"/>
+            	<ul>
+                <li id="d-charge"></li> 
+                <li id="d-username"></li>
+              	<li id="d-dob"></li>
+              	<li id="d-bounty"></li>
+              	<li id="d-jail"></li>  
+              	<li id="d-fine"></li> 
+             	<div id="BOXRECORDS" class="BOXRECORDS">
+        			<p ></p>
+        		</div>
+            	</ul>
+                
+          	</div>
+            
+            <table class="centered" cellspacing="0" cellpadding="0">
+                <thead>
+          			<tr>
+              		<th id="DDESC">DE</th>
+          			</tr>
+        		</thead>
+               <tbody>
+                   <tr id="DESC">
+                   </tr>
+               </tbody>
+             </table>
+        </div>    
+	</div>
+    
+	<div id="REGISTERIDENTITY">
+            <p class="error">INFO - Birthday, month, age could be wrong must be min 2 EX: 01, 12, 45 !</p>
+            <h1></h1>
+        <div class="row">
+		<form class="col s12">
+                
+			<div class="row">
+                <div class="input-field col s6">
+                  <p for="offense-search" id="RID"></p>
+                  <input id="id-register" type="number" class="validate" required>
+                  <span class="helper-text" data-error="Wrong !" data-success="Right !">ID Jucator...</span>
+                </div>
+                  
+                <div class="input-field col s6">
+                  <p for="offense-search" id="RDAY"></p>
+                  <input id="dayborn-register" type="number" class="validate" required>
+                  <span class="helper-text" data-error="wrong" data-success="right">Ziua de nastere EX 05...</span>
+                </div>
+                  
+                <div class="input-field col s6">
+                  <p for="offense-search" id="RMONTH"></p>
+                  <input id="monthborn-register" type="number" class="validate" required>
+                  <span class="helper-text" data-error="wrong" data-success="right">Luna nasterii EX 08...</span>
+                </div>
+                  
+                <div class="input-field col s6">
+                  <p for="offense-search" id="RAGE"></p>
+                  <input id="age-register" type="number" class="validate" required>
+				  <span class="helper-text" data-error="wrong" data-success="right">Varsta cetateanului...</span>
+                </div>
+                  
+                <div class="input-field col s6">
+                  <p for="offense-search" id="RKG"></p>
+                  <input id="kg-register" type="number" class="validate" required>
+                  <span class="helper-text" data-error="wrong" data-success="right">KG Cetatean...</span>
+                </div>
+                  
+                <div class="input-field col s6">
+                  <p for="offense-search" id="RCM"></p>
+                  <input id="height-register" type="number" class="validate" required>
+                  <span class="helper-text" data-error="wrong" data-success="right">Greutate...</span>
+                </div>
+                  
+                <div class="input-field col s6">
+                  <p for="offense-search" id="REYES"></p>
+                  <input id="eyes-register" type="text" class="validate" required>
+                  <span class="helper-text" data-error="wrong" data-success="right">Culoarea ochiilor...</span>
+                </div>
+                  
+                <div class="input-field col s6">
+                  <p for="offense-search" id="RHAIR"></p>
+                  <input id="hair-register" type="text" class="validate" required>
+				  <span class="helper-text" data-error="wrong" data-success="right">Culoarea parului...</span>
+                </div>
+			</div>
+		</form>
+        </div>    
+	</div> 
+            
+            
+        </div>
+
+        	<div id="home-nav">
+          		<a id="SEARCHTAB" class="nav" ></a>
+          		<a id="REGISTERTAB" class="nav back-one"></a>
+          		<a id="CLOSEBUTTON" class="nav back-two"></a>
+                <a id="SEARCHBUTTON" class="nav back-two"></a>
+                <a id="DELETEBUTTON" class="nav back-two"></a>
+                <a id="CREATEBUTTON" class="nav back-two">ADD IDENTITY</a>
+                <a id="ADDBUTTON" class="nav back-two">ADD DOSSIER</a>
+                <a id="ADDBUTTON2" class="nav back-two">ADD DOSSIER</a>
+        	</div>
+    
+        	<div id="front-cover" class="cover">
+        		<h1 class="hidden">BSN Design</h1>
+            	<p></p>
+        	</div>
+    
+        	<div id="elastic-verytop" class="elastic"></div>
+        		<div id="elastic-top-box">
+          			<div id="elastic-top" class="elastic"></div>
+        		</div>
+        	<div id="elastic-main" class="elastic"></div>
+</div>
+</div>
+   
+</body>
+</html>

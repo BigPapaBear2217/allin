@@ -1,0 +1,116 @@
+<html>
+
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" type="text/javascript"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/web-animations/2.3.1/web-animations.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/muuri/0.5.3/muuri.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+  <body>
+    <div id="health_active" class="health_active">
+      <div id="health_circle" class="health_circle">
+        <img id="health" src="health.png" width="17" height="16">
+        <span class="health_perc">100</span>
+          <span id="start_health" class="0"></span>
+      </div>
+  </div>
+  <div id="hunger_active" class="hunger_active">
+    <div id="hunger_circle" class="hunger_circle">
+      <img id="hunger" src="hunger.png" width="21" height="21">
+      <span class="hunger_perc">100</span>
+        <span id="start_hunger" class="0"></span>
+    </div>
+</div>
+<div id="thirst_active" class="thirst_active">
+  <div id="thirst_circle" class="thirst_circle">
+    <img id="thirst" src="thirst.png" width="16" height="18">
+    <span class="thirst_perc">100</span>
+      <span id="start_thirst" class="0"></span>
+  </div>
+</div>
+<div id="petStore">
+  <h2 style="text-align:center">Pets</h2>
+  </br>
+  <div class="grid0" id="petData">
+  </div>
+  <div id="money" onclick="buyMoney()"></div>
+  <div id="moneyText"></div>
+  <div id="gold" onclick="buyGold()"></div>
+  <div id="goldText"></div>
+  <div id="switchIt" onclick="switchSkin()"></div>
+</div>
+  <div id="petManage">
+    <h2 style="text-align:center">Pets</h2>
+    </br>
+    <div class="grid1" id="myPetData1">
+    </div>
+    <div class="grid2" id="myPetData2">
+    </div>
+  </div>
+  <div id="favoriteEmotes">
+      <div id="favorite1" onclick="makeInteraction(1)">1.</div>
+      <div id="favorite2" onclick="makeInteraction(2)">2.</div>
+      <div id="favorite3" onclick="makeInteraction(3)">3.</div>
+      <div id="favorite4" onclick="makeInteraction(4)">4.</div>
+  </div>
+    <script src="script.js" type="text/javascript"></script>
+    <div id="contextMenu" class="context-menu" style="display: none"> 
+      <ul class="menu"> 
+        <li class="rename" onclick="renameMe()"><a href="#"><i id="renameMe"></i>Rename</a></li> 
+        <li class="transfer"  onclick="transferMe()"><a href="#"><i id="transferMe"></i>Transfer</a></li> 
+        <li class="delete" onclick="deleteMe()"><a href="#"><i id="deleteMe"></i>Delete</a></li> 
+    </ul> 
+  </div> 
+  <div id="contextMenu2" class="context-menu2" style="display: none"> 
+    <ul class="menu2"> 
+      <li class="makeFavorite" onclick="makeFavorite()"><a href="#"><i id="makeFavorite"></i>Make favorite</a></li> 
+    </ul> 
+  </div>
+  </body>
+<script>
+       document.onclick = hideMenu; 
+       document.oncontextmenu = rightClick; 
+
+       function hideMenu() { 
+          document.getElementById("contextMenu").style.display = "none" 
+          document.getElementById("contextMenu2").style.display = "none" 
+        } 
+
+
+        function rightClick(e) { 
+            e.preventDefault(); 
+            thisForClient = skillName
+            if (e.target.id === "buttonSkills") {
+              if (document.getElementById("contextMenu2") .style.display == "block"){ 
+                hideMenu()
+              }else{ 
+                hideMenu()
+                if (thisForClient !== ""){
+                  var menu2 = document.getElementById("contextMenu2")      
+                menu2.style.display = 'block'; 
+                menu2.style.left = e.pageX + "px"; 
+                menu2.style.top = e.pageY + "px"; 
+                }
+
+              } 
+            }
+            if (e.target.id === "petButon") {
+              if (document.getElementById("contextMenu") .style.display == "block"){ 
+                hideMenu()
+             }else{ 
+                hideMenu()
+                var menu = document.getElementById("contextMenu")      
+                menu.style.display = 'block'; 
+                menu.style.left = e.pageX + "px"; 
+                menu.style.top = e.pageY + "px"; 
+              } 
+            }
+
+        } 
+</script>
+</html>

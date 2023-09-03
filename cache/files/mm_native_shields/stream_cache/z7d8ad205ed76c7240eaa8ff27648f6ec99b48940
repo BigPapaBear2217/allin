@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CMapTypes>
+ <extensions />
+ <archetypes>
+  <Item type="CBaseArchetypeDef">
+   <lodDist value="60" />
+   <flags value="0" />
+   <specialAttribute value="0" />
+   <bbMin x="-1.13827169" y="-0.2301541" z="-1.13827169" />
+   <bbMax x="1.50696659" y="0.218072981" z="1.13827169" />
+   <bsCentre x="0.184347451" y="-0.006040558" z="0" />
+   <bsRadius value="1.75932109" />
+   <hdTextureDist value="40" />
+   <name>mlohub_shield01</name>
+   <textureDictionary>mlohub_shields</textureDictionary>
+   <clipDictionary />
+   <drawableDictionary />
+   <physicsDictionary>mlohub_shield01</physicsDictionary>
+   <assetType>ASSET_TYPE_DRAWABLE</assetType>
+   <assetName>mlohub_shield01</assetName>
+   <extensions />
+  </Item>
+  <Item type="CBaseArchetypeDef">
+   <lodDist value="60" />
+   <flags value="0" />
+   <specialAttribute value="0" />
+   <bbMin x="-1.13827169" y="-0.2301541" z="-1.13827169" />
+   <bbMax x="1.50696659" y="0.218072981" z="1.13827169" />
+   <bsCentre x="0.184347451" y="-0.006040558" z="0" />
+   <bsRadius value="1.75932109" />
+   <hdTextureDist value="40" />
+   <name>mlohub_shield02</name>
+   <textureDictionary>mlohub_shields</textureDictionary>
+   <clipDictionary />
+   <drawableDictionary />
+   <physicsDictionary>mlohub_shield02</physicsDictionary>
+   <assetType>ASSET_TYPE_DRAWABLE</assetType>
+   <assetName>mlohub_shield02</assetName>
+   <extensions />
+  </Item>
+  <Item type="CBaseArchetypeDef">
+   <lodDist value="60" />
+   <flags value="0" />
+   <specialAttribute value="0" />
+   <bbMin x="-1.13827169" y="-0.2301541" z="-1.13827169" />
+   <bbMax x="1.50696659" y="0.218072981" z="1.13827169" />
+   <bsCentre x="0.184347451" y="-0.006040558" z="0" />
+   <bsRadius value="1.75932109" />
+   <hdTextureDist value="40" />
+   <name>mlohub_shield03</name>
+   <textureDictionary>mlohub_shields</textureDictionary>
+   <clipDictionary />
+   <drawableDictionary />
+   <physicsDictionary>mlohub_shield03</physicsDictionary>
+   <assetType>ASSET_TYPE_DRAWABLE</assetType>
+   <assetName>mlohub_shield03</assetName>
+   <extensions />
+  </Item>
+  <Item type="CBaseArchetypeDef">
+   <lodDist value="60" />
+   <flags value="0" />
+   <specialAttribute value="0" />
+   <bbMin x="-1.13827169" y="-0.2301541" z="-1.13827169" />
+   <bbMax x="1.50696659" y="0.218072981" z="1.13827169" />
+   <bsCentre x="0.184347451" y="-0.006040558" z="0" />
+   <bsRadius value="1.75932109" />
+   <hdTextureDist value="40" />
+   <name>mlohub_shield04</name>
+   <textureDictionary>mlohub_shields</textureDictionary>
+   <clipDictionary />
+   <drawableDictionary />
+   <physicsDictionary>mlohub_shield04</physicsDictionary>
+   <assetType>ASSET_TYPE_DRAWABLE</assetType>
+   <assetName>mlohub_shield04</assetName>
+   <extensions />
+  </Item>
+  <Item type="CBaseArchetypeDef">
+   <lodDist value="60" />
+   <flags value="0" />
+   <specialAttribute value="0" />
+   <bbMin x="-1.13827169" y="-0.2301541" z="-1.13827169" />
+   <bbMax x="1.50696659" y="0.218072981" z="1.13827169" />
+   <bsCentre x="0.184347451" y="-0.006040558" z="0" />
+   <bsRadius value="1.75932109" />
+   <hdTextureDist value="40" />
+   <name>mlohub_shield05</name>
+   <textureDictionary>mlohub_shields</textureDictionary>
+   <clipDictionary />
+   <drawableDictionary />
+   <physicsDictionary>mlohub_shield05</physicsDictionary>
+   <assetType>ASSET_TYPE_DRAWABLE</assetType>
+   <assetName>mlohub_shield05</assetName>
+   <extensions />
+  </Item>
+  <Item type="CBaseArchetypeDef">
+   <lodDist value="60" />
+   <flags value="0" />
+   <specialAttribute value="0" />
+   <bbMin x="-1.13827169" y="-0.2301541" z="-1.13827169" />
+   <bbMax x="1.50696659" y="0.218072981" z="1.13827169" />
+   <bsCentre x="0.184347451" y="-0.006040558" z="0" />
+   <bsRadius value="1.75932109" />
+   <hdTextureDist value="40" />
+   <name>mlohub_shield06</name>
+   <textureDictionary>mlohub_shields</textureDictionary>
+   <clipDictionary />
+   <drawableDictionary />
+   <physicsDictionary>mlohub_shield06</physicsDictionary>
+   <assetType>ASSET_TYPE_DRAWABLE</assetType>
+   <assetName>mlohub_shield06</assetName>
+   <extensions />
+  </Item>
+  <Item type="CBaseArchetypeDef">
+   <lodDist value="60" />
+   <flags value="0" />
+   <specialAttribute value="0" />
+   <bbMin x="-1.13827169" y="-0.2301541" z="-1.13827169" />
+   <bbMax x="1.50696659" y="0.218072981" z="1.13827169" />
+   <bsCentre x="0.184347451" y="-0.006040558" z="0" />
+   <bsRadius value="1.75932109" />
+   <hdTextureDist value="40" />
+   <name>mlohub_shield07</name>
+   <textureDictionary>mlohub_shields</textureDictionary>
+   <clipDictionary />
+   <drawableDictionary />
+   <physicsDictionary>mlohub_shield07</physicsDictionary>
+   <assetType>ASSET_TYPE_DRAWABLE</assetType>
+   <assetName>mlohub_shield07</assetName>
+   <extensions />
+  </Item>
+ </archetypes>
+ <name>mlohub_shields</name>
+ <dependencies />
+ <compositeEntityTypes itemType="CCompositeEntityType" />
+</CMapTypes>

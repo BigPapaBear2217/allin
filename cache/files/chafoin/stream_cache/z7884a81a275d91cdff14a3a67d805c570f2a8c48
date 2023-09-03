@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<CMapData>
+	<flags value="2"/>
+	<contentFlags value="65"/>
+	<streamingExtentsMin x="1005.206421" y="-77.865295" z="-312.808395"/>
+	<streamingExtentsMax x="1849.937866" y="742.845032" z="487.849907"/>
+	<entitiesExtentsMin x="1405.206421" y="322.134705" z="87.191605"/>
+	<entitiesExtentsMax x="1449.937866" y="342.845032" z="87.849907"/>
+	<entities>
+		<Item type="CEntityDef">
+			<archetypeName>p_hitchingpost04x</archetypeName>
+			<flags value="1572897"/>
+			<position x="1449.937866" y="342.845032" z="87.849907"/>
+			<rotation w="0.700377" x="0.000000" y="-0.000000" z="-0.713773"/>
+			<scaleXY value="1"/>
+			<scaleZ value="1"/>
+			<parentIndex value="-1"/>
+			<lodDist value="500"/>
+			<childLodDist value="500"/>
+			<lodLevel>LODTYPES_DEPTH_HD</lodLevel>
+			<numChildren value="0"/>
+			<ambientOcclusionMultiplier value="255"/>
+			<artificialAmbientOcclusion value="255"/>
+		</Item>
+		<Item type="CEntityDef">
+			<archetypeName>p_hitchingpost04x</archetypeName>
+			<flags value="1572897"/>
+			<position x="1449.736450" y="340.601013" z="87.791397"/>
+			<rotation w="0.700377" x="0.000000" y="-0.000000" z="-0.713773"/>
+			<scaleXY value="1"/>
+			<scaleZ value="1"/>
+			<parentIndex value="-1"/>
+			<lodDist value="500"/>
+			<childLodDist value="500"/>
+			<lodLevel>LODTYPES_DEPTH_HD</lodLevel>
+			<numChildren value="0"/>
+			<ambientOcclusionMultiplier value="255"/>
+			<artificialAmbientOcclusion value="255"/>
+		</Item>
+		<Item type="CEntityDef">
+			<archetypeName>p_hitchingpost01x</archetypeName>
+			<flags value="1572897"/>
+			<position x="1431.507935" y="333.225067" z="87.559311"/>
+			<rotation w="0.713250" x="-0.000000" y="0.000000" z="0.700909"/>
+			<scaleXY value="1"/>
+			<scaleZ value="1"/>
+			<parentIndex value="-1"/>
+			<lodDist value="500"/>
+			<childLodDist value="500"/>
+			<lodLevel>LODTYPES_DEPTH_HD</lodLevel>
+			<numChildren value="0"/>
+			<ambientOcclusionMultiplier value="255"/>
+			<artificialAmbientOcclusion value="255"/>
+		</Item>
+		<Item type="CEntityDef">
+			<archetypeName>p_hitchingpost01x</archetypeName>
+			<flags value="1572897"/>
+			<position x="1431.526123" y="325.700867" z="87.559311"/>
+			<rotation w="0.713250" x="-0.000000" y="0.000000" z="0.700909"/>
+			<scaleXY value="1"/>
+			<scaleZ value="1"/>
+			<parentIndex value="-1"/>
+			<lodDist value="500"/>
+			<childLodDist value="500"/>
+			<lodLevel>LODTYPES_DEPTH_HD</lodLevel>
+			<numChildren value="0"/>
+			<ambientOcclusionMultiplier value="255"/>
+			<artificialAmbientOcclusion value="255"/>
+		</Item>
+		<Item type="CEntityDef">
+			<archetypeName>p_hitchingpost01x</archetypeName>
+			<flags value="1572897"/>
+			<position x="1409.530640" y="323.120972" z="87.400154"/>
+			<rotation w="0.994522" x="0.000000" y="-0.000000" z="-0.104528"/>
+			<scaleXY value="1"/>
+			<scaleZ value="1"/>
+			<parentIndex value="-1"/>
+			<lodDist value="500"/>
+			<childLodDist value="500"/>
+			<lodLevel>LODTYPES_DEPTH_HD</lodLevel>
+			<numChildren value="0"/>
+			<ambientOcclusionMultiplier value="255"/>
+			<artificialAmbientOcclusion value="255"/>
+		</Item>
+		<Item type="CEntityDef">
+			<archetypeName>p_hitchingpost01x</archetypeName>
+			<flags value="1572897"/>
+			<position x="1405.206421" y="322.134705" z="87.191605"/>
+			<rotation w="0.992438" x="0.000000" y="-0.000000" z="-0.122746"/>
+			<scaleXY value="1"/>
+			<scaleZ value="1"/>
+			<parentIndex value="-1"/>
+			<lodDist value="500"/>
+			<childLodDist value="500"/>
+			<lodLevel>LODTYPES_DEPTH_HD</lodLevel>
+			<numChildren value="0"/>
+			<ambientOcclusionMultiplier value="255"/>
+			<artificialAmbientOcclusion value="255"/>
+		</Item>
+	</entities>
+</CMapData>

@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<CMapData>
+	<flags value="2"/>
+	<contentFlags value="65"/>
+	<streamingExtentsMin x="1018.038940" y="-60.572998" z="-313.070000"/>
+	<streamingExtentsMax x="1818.616333" y="742.441986" z="487.223045"/>
+	<entitiesExtentsMin x="1418.038940" y="339.427002" z="86.930000"/>
+	<entitiesExtentsMax x="1418.616333" y="342.441986" z="87.223045"/>
+	<entities>
+		<Item type="CEntityDef">
+			<archetypeName>p_emrfencegatel02x</archetypeName>
+			<flags value="1572897"/>
+			<position x="1418.038940" y="339.427002" z="86.930000"/>
+			<rotation w="0.777146" x="0.000000" y="-0.000000" z="-0.629320"/>
+			<scaleXY value="1"/>
+			<scaleZ value="1"/>
+			<parentIndex value="-1"/>
+			<lodDist value="500"/>
+			<childLodDist value="500"/>
+			<lodLevel>LODTYPES_DEPTH_HD</lodLevel>
+			<numChildren value="0"/>
+			<ambientOcclusionMultiplier value="255"/>
+			<artificialAmbientOcclusion value="255"/>
+		</Item>
+		<Item type="CEntityDef">
+			<archetypeName>p_emrfencepost02x</archetypeName>
+			<flags value="1572897"/>
+			<position x="1418.616333" y="342.441986" z="87.223045"/>
+			<rotation w="0.997497" x="0.000000" y="-0.000000" z="-0.070705"/>
+			<scaleXY value="1"/>
+			<scaleZ value="1"/>
+			<parentIndex value="-1"/>
+			<lodDist value="500"/>
+			<childLodDist value="500"/>
+			<lodLevel>LODTYPES_DEPTH_HD</lodLevel>
+			<numChildren value="0"/>
+			<ambientOcclusionMultiplier value="255"/>
+			<artificialAmbientOcclusion value="255"/>
+		</Item>
+	</entities>
+</CMapData>

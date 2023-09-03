@@ -1,0 +1,176 @@
+<?xml version="1.0"?>
+<CMapData>
+	<flags value="2"/>
+	<contentFlags value="65"/>
+	<streamingExtentsMin x="743.396851" y="-7465.770996" z="-356.980000"/>
+	<streamingExtentsMax x="1545.685059" y="-6663.471680" z="444.669998"/>
+	<entitiesExtentsMin x="1143.396851" y="-7065.770996" z="43.020000"/>
+	<entitiesExtentsMax x="1145.685059" y="-7063.471680" z="44.669998"/>
+	<entities>
+		<Item type="CEntityDef">
+			<archetypeName>p_chair37x</archetypeName>
+			<flags value="1572897"/>
+			<position x="1144.948120" y="-7065.770996" z="43.560421"/>
+			<rotation w="0.159225" x="0.020309" y="0.061415" z="0.985121"/>
+			<scaleXY value="1"/>
+			<scaleZ value="1"/>
+			<parentIndex value="-1"/>
+			<lodDist value="500"/>
+			<childLodDist value="500"/>
+			<lodLevel>LODTYPES_DEPTH_HD</lodLevel>
+			<numChildren value="0"/>
+			<ambientOcclusionMultiplier value="255"/>
+			<artificialAmbientOcclusion value="255"/>
+		</Item>
+		<Item type="CEntityDef">
+			<archetypeName>p_chair37x</archetypeName>
+			<flags value="1572897"/>
+			<position x="1145.347534" y="-7063.851074" z="43.301052"/>
+			<rotation w="0.929262" x="0.064706" y="0.016865" z="0.363319"/>
+			<scaleXY value="1"/>
+			<scaleZ value="1"/>
+			<parentIndex value="-1"/>
+			<lodDist value="500"/>
+			<childLodDist value="500"/>
+			<lodLevel>LODTYPES_DEPTH_HD</lodLevel>
+			<numChildren value="0"/>
+			<ambientOcclusionMultiplier value="255"/>
+			<artificialAmbientOcclusion value="255"/>
+		</Item>
+		<Item type="CEntityDef">
+			<archetypeName>p_chair37x</archetypeName>
+			<flags value="1572897"/>
+			<position x="1144.130737" y="-7065.753418" z="43.574661"/>
+			<rotation w="0.164923" x="0.000765" y="-0.064682" z="-0.984183"/>
+			<scaleXY value="1"/>
+			<scaleZ value="1"/>
+			<parentIndex value="-1"/>
+			<lodDist value="500"/>
+			<childLodDist value="500"/>
+			<lodLevel>LODTYPES_DEPTH_HD</lodLevel>
+			<numChildren value="0"/>
+			<ambientOcclusionMultiplier value="255"/>
+			<artificialAmbientOcclusion value="255"/>
+		</Item>
+		<Item type="CEntityDef">
+			<archetypeName>p_chair37x</archetypeName>
+			<flags value="1572897"/>
+			<position x="1145.578247" y="-7065.310059" z="43.488419"/>
+			<rotation w="0.462990" x="0.038703" y="0.051830" z="0.884000"/>
+			<scaleXY value="1"/>
+			<scaleZ value="1"/>
+			<parentIndex value="-1"/>
+			<lodDist value="500"/>
+			<childLodDist value="500"/>
+			<lodLevel>LODTYPES_DEPTH_HD</lodLevel>
+			<numChildren value="0"/>
+			<ambientOcclusionMultiplier value="255"/>
+			<artificialAmbientOcclusion value="255"/>
+		</Item>
+		<Item type="CEntityDef">
+			<archetypeName>p_tablepoker01x</archetypeName>
+			<flags value="1572897"/>
+			<position x="1144.529175" y="-7064.691406" z="43.429127"/>
+			<rotation w="0.507693" x="0.026832" y="-0.061248" z="-0.858939"/>
+			<scaleXY value="1"/>
+			<scaleZ value="1"/>
+			<parentIndex value="-1"/>
+			<lodDist value="500"/>
+			<childLodDist value="500"/>
+			<lodLevel>LODTYPES_DEPTH_HD</lodLevel>
+			<numChildren value="0"/>
+			<ambientOcclusionMultiplier value="255"/>
+			<artificialAmbientOcclusion value="255"/>
+		</Item>
+		<Item type="CEntityDef">
+			<archetypeName>p_chair37x</archetypeName>
+			<flags value="1572897"/>
+			<position x="1145.685059" y="-7064.429199" z="43.372780"/>
+			<rotation w="0.791770" x="0.057515" y="0.034107" z="0.607149"/>
+			<scaleXY value="1"/>
+			<scaleZ value="1"/>
+			<parentIndex value="-1"/>
+			<lodDist value="500"/>
+			<childLodDist value="500"/>
+			<lodLevel>LODTYPES_DEPTH_HD</lodLevel>
+			<numChildren value="0"/>
+			<ambientOcclusionMultiplier value="255"/>
+			<artificialAmbientOcclusion value="255"/>
+		</Item>
+		<Item type="CEntityDef">
+			<archetypeName>p_chair37x</archetypeName>
+			<flags value="1572897"/>
+			<position x="1143.396851" y="-7065.234375" z="43.517879"/>
+			<rotation w="0.483075" x="0.025285" y="-0.061903" z="-0.873022"/>
+			<scaleXY value="1"/>
+			<scaleZ value="1"/>
+			<parentIndex value="-1"/>
+			<lodDist value="500"/>
+			<childLodDist value="500"/>
+			<lodLevel>LODTYPES_DEPTH_HD</lodLevel>
+			<numChildren value="0"/>
+			<ambientOcclusionMultiplier value="255"/>
+			<artificialAmbientOcclusion value="255"/>
+		</Item>
+		<Item type="CEntityDef">
+			<archetypeName>p_lantern05xhang</archetypeName>
+			<flags value="1572897"/>
+			<position x="1144.537109" y="-7064.461914" z="44.669998"/>
+			<rotation w="0.011404" x="-0.007439" y="-0.066452" z="-0.997697"/>
+			<scaleXY value="1"/>
+			<scaleZ value="1"/>
+			<parentIndex value="-1"/>
+			<lodDist value="500"/>
+			<childLodDist value="500"/>
+			<lodLevel>LODTYPES_DEPTH_HD</lodLevel>
+			<numChildren value="0"/>
+			<ambientOcclusionMultiplier value="255"/>
+			<artificialAmbientOcclusion value="255"/>
+		</Item>
+		<Item type="CEntityDef">
+			<archetypeName>p_chair37x</archetypeName>
+			<flags value="1572897"/>
+			<position x="1143.504639" y="-7064.069824" z="43.309475"/>
+			<rotation w="0.873653" x="0.068235" y="-0.010911" z="-0.481617"/>
+			<scaleXY value="1"/>
+			<scaleZ value="1"/>
+			<parentIndex value="-1"/>
+			<lodDist value="500"/>
+			<childLodDist value="500"/>
+			<lodLevel>LODTYPES_DEPTH_HD</lodLevel>
+			<numChildren value="0"/>
+			<ambientOcclusionMultiplier value="255"/>
+			<artificialAmbientOcclusion value="255"/>
+		</Item>
+		<Item type="CEntityDef">
+			<archetypeName>p_chair37x</archetypeName>
+			<flags value="1572897"/>
+			<position x="1144.449097" y="-7063.471680" z="43.257843"/>
+			<rotation w="0.993076" x="0.069057" y="-0.002487" z="-0.094995"/>
+			<scaleXY value="1"/>
+			<scaleZ value="1"/>
+			<parentIndex value="-1"/>
+			<lodDist value="500"/>
+			<childLodDist value="500"/>
+			<lodLevel>LODTYPES_DEPTH_HD</lodLevel>
+			<numChildren value="0"/>
+			<ambientOcclusionMultiplier value="255"/>
+			<artificialAmbientOcclusion value="255"/>
+		</Item>
+		<Item type="CEntityDef">
+			<archetypeName>mp007_p_tentharriet01x</archetypeName>
+			<flags value="1572897"/>
+			<position x="1143.742554" y="-7064.860840" z="43.020000"/>
+			<rotation w="0.484643" x="0.012691" y="0.022895" z="-0.874320"/>
+			<scaleXY value="1"/>
+			<scaleZ value="1"/>
+			<parentIndex value="-1"/>
+			<lodDist value="500"/>
+			<childLodDist value="500"/>
+			<lodLevel>LODTYPES_DEPTH_HD</lodLevel>
+			<numChildren value="0"/>
+			<ambientOcclusionMultiplier value="255"/>
+			<artificialAmbientOcclusion value="255"/>
+		</Item>
+	</entities>
+</CMapData>

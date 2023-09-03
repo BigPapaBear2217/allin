@@ -1,0 +1,177 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link href="./index.css" rel="stylesheet" type="text/css">
+<link href="./others.css" rel="stylesheet" type="text/css">     
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://kit.fontawesome.com/488c064d5d.js" crossorigin="anonymous"></script>
+<script src="client://game/ui/jquery.js" type="text/javascript"></script>
+<script src="./index.js" type="text/javascript"></script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+</style>
+
+		<script type="text/javascript">		
+			window.addEventListener("message", function(event) {
+				var item = event.data;
+				var newAudio = document.createElement('audio');
+                newAudio.id = item.sound;
+                newAudio.src = 'sounds/' + item.sound + '.ogg';
+                document.body.appendChild(newAudio);
+				if (item.sound && item.volume) {
+					document.getElementById(item.sound);
+					document.getElementById(item.sound).load();
+					document.getElementById(item.sound).volume = item.volume;
+					document.getElementById(item.sound).play();
+				}
+			});					
+		</script>    
+</head>
+<body>
+	<div id="container">
+		<div id="inner">
+  				<div id="playerlist">
+				<div class ="ptitle">
+					<span class="pname">PLAYERS</span><input type="text" id = "search" placeholder = "&#xf002; Search name/id" value="" />  		
+		  		</div>
+			  	<div id="pinner">
+		   		</div>
+		  	</div>
+		<main>
+		<header><span class="menutitle" style="padding-left:15px">SS Admin Panel</span><a href="#back" id="back" class="back"><i class="fas fa-chevron-left"></i> BACK</a><a href="#server" id="button" class="server" style="display:none">Admin Actions</a></header>
+		<div id="server">
+			<div id="info">
+				<div class="titlebox">Your Position</div>
+				<div class="inner">
+				<div class="coords"></div>
+				<a href="#coords" class="clipboard" id="clipboard">(Copy to clipboard)</a>
+				</div>
+			</div>
+			<div class="sectiontitle">Admin Actions</div>
+			<div id="grid-container" class="grid-container">
+				<div><button class="btn" data-action="announce"style="font-family: 'Special Elite', cursive"><i class="fas fa-scroll"></i><span>Announce</span></button></div>
+				<div><button class="btn" data-action="spawnVehicle"style="font-family: 'Special Elite', cursive"><i class="fas fa-horse"></i><span>Spawn Wagon</span></button></div>
+				<div><button class="btn" data-action="noclip"style="font-family: 'Special Elite', cursive"><i class="fas fa-ghost"></i><span>Noclip</span></button></div>
+				<div><button class="btn" id="tpwp-button"style="font-family: 'Special Elite', cursive"><i class="fas fa-route"></i>Tp Waypoint</button></div>
+				<div><button class="btn" data-action="tpcoords"style="font-family: 'Special Elite', cursive"><i class="fas fa-map-location-dot"></i>Tp Coords</button></div>
+				<div><button class="btn" data-action="reviveme"style="font-family: 'Special Elite', cursive"><i class="fas fa-kit-medical"></i>Revive</button></div>
+				<div><button class="btn" data-action="healme"style="font-family: 'Special Elite', cursive"><i class="fas fa-heart-pulse"></i>Heal</button></div>
+				<div><button class="btn" data-action="inventory"style="font-family: 'Special Elite', cursive"><i class="fas fa-box-open"></i> Stash </button></div>
+				<div><button class="btn" data-action="fixveh" style="font-family: 'Special Elite', cursive"><i class="fas fa-hammer"></i> Fix Vehicle </button></div>
+				<div><button class="btn" data-action="delveh" style="font-family: 'Special Elite', cursive"><i class="fas fa-trash-can"></i> Del Vehicle </button></div>
+				<div><button class="btn" data-action="blips"style="font-family: 'Special Elite', cursive"><i class="fas fa-location-dot"></i>Players Blip</button></div>
+                <div><button class="btn" data-action="godmode"style="font-family: 'Special Elite', cursive"><i class="fas fa-bible"></i>God Mode</button></div>
+				<div><button class="btn" data-action="restart" style="font-family: 'Special Elite', cursive"><i class="fas fa-stopwatch-20"></i>Restart</button></div>
+                <div><button class="btn" data-action="tickets"style="font-family: 'Special Elite', cursive"><i class="fas fa-ticket"></i>Tickets</button></div>
+				<div><button class="btn" data-action="banlist"style="font-family: 'Special Elite', cursive"><i class="fas fa-ban"></i>Banlist</button></div>
+			</div>		
+		</div>
+		<div id="actions">
+		<div id="info">
+			<div class="titlebox"><i class="fas fa-info-circle"></i> About <span class="playername"></span></div>
+			<div id="section">
+			<span class="title">Name:</span><span class="data" data-name="name"></span>
+			</div>
+			<div id="section">
+			<span class="title">Steamid:</span><span class="data" data-name="license"></span>
+			</div>
+			<div id="section">
+			<span class="title">Money:</span><span class="data" data-name="money"></span>
+			</div>
+            <div id="section">
+			<span class="title">Job:</span><span class="data" data-name="job"></span>
+			</div>
+            <div id="section">
+			<span class="title">Gang:</span><span class="data" data-name="gang"></span>
+			</div>
+            <div id="section">
+			<span class="title">Played Time:</span><span class="data" data-name="playtime"></span>
+			</div>
+			<div id="section">
+			<span class="title">Warns:</span><span class="data" data-name="warns"></span>
+			</div>
+		</div>	
+		<div class="sectiontitle">Admin Commands</div>
+			<div id="grid-container" class="grid-container">             
+				<div><button class="btn" data-action="kick"style="font-family: 'Special Elite', cursive"><i class="fas fa-gavel"></i><span> Kick </span></button></div>
+				<div><button class="btn" data-action="warn"style="font-family: 'Special Elite', cursive"><i class="fas fa-triangle-exclamation"></i><span> Warn </span></button></div>
+                <div><button class="btn" data-action="ban"style="font-family: 'Special Elite', cursive"><i class="fas fa-user-slash"></i><span> Ban </span></button></div>
+				<div><button class="btn ban" data-action="permaban"style="font-family: 'Special Elite', cursive"><i class="fas fa-ban"></i><span> Perma Ban </span></button></div>
+			</div>
+		<div class="sectiontitle">Actions Commands</div>
+			<div id="grid-container" class="grid-container">
+				<div><button class="btn" data-action="bring"style="font-family: 'Special Elite', cursive"><i class="fas fa-people-carry"></i>Bring</button></div>
+				<div><button class="btn" data-action="goto"style="font-family: 'Special Elite', cursive"><i class="fas fa-map-marked-alt"></i>GoTo</button></div>
+				<div><button class="btn" data-action="spectate"style="font-family: 'Special Elite', cursive"><i class="fas fa-binoculars"></i>Spectate</button></div>
+				<div><button class="btn" data-action="freeze"style="font-family: 'Special Elite', cursive"><i class="fas fa-temperature-low"></i>Freeze</button></div>
+				<div><button class="btn" data-action="kill"style="font-family: 'Special Elite', cursive"><i class="fas fa-skull-crossbones"></i>Kill</button></div>
+				<div><button class="btn" data-action="revive"style="font-family: 'Special Elite', cursive"><i class="fas fa-kit-medical"></i>Revive</button></div>
+				<div><button class="btn" data-action="heal"style="font-family: 'Special Elite', cursive"><i class="fas fa-heart-pulse"></i>Heal</button></div>
+				<div><button class="btn" data-action="addCash"style="font-family: 'Special Elite', cursive"><i class="fas fa-money-bill-1-wave"></i>Give Money</button></div>
+				<div><button class="btn" data-action="addBank"style="font-family: 'Special Elite', cursive"><i class="fas fa-coins"></i>Give Gold</button></div>
+				<div><button class="btn" data-action="giveItem"style="font-family: 'Special Elite', cursive"><i class="fas fa-box-open"></i>Give items</button></div>
+				<div><button class="btn" data-action="giveWeapon"style="font-family: 'Special Elite', cursive"><i class="fas fa-gun"></i><span> Give Weapon </span></button></div>
+				<div><button class="btn" data-action="checkdeath"style="font-family: 'Special Elite', cursive"><i class="fas fa-bed-pulse"></i><span> Check Death </span></button></div>  
+				<div><button class="btn" data-action="setjob"style="font-family: 'Special Elite', cursive"><i class="fas fa-briefcase"></i>Set Job</button></div>
+                <div><button class="btn" data-action="notifyit"style="font-family: 'Special Elite', cursive"><i class="fas fa-comment"></i>Notify</button></div>
+			</div>
+		<div id="perms">	
+		<div class="sectiontitle">Funny Commands</div>
+			<div id="grid-container" class="grid-container">
+                <div><button class="btn" data-action="titan"><i class="fas fa-hippo"></i><span> Titan </span></button></div>
+				<div><button class="btn" data-action="lightning"><i class="fas fa-cloud-bolt"></i><span> Lightning </span></button></div>
+				<div><button class="btn" data-action="windows"><i class="fas fa-brands fa-windows"></i><span> Windows </span></button></div>
+			</div>
+		</div>
+		</div>
+				   	<div id="inputmanager">
+				   		<div id="inputwrap">
+		   	    		<div class="inputtitle" id="inputtitle"></div>
+		   	    		<input type="text" id = "datainput" class = "mtextareas" placeholder = "" />
+		   	    		<br />
+		   	    		<div id="buttonwrap">
+		   	    		<button class = "button" id = "confirminput">Confirm</button>
+		   	    		<button class = "button" id = "cancelinput">cancel</button>
+		   	    		</div>
+		   	    		</div>
+		   	    	</div>
+
+		   	    	<div id="confirmaction">
+				   		<div id="inputwrap">
+		   	    		<div class="inputtitle" id="inputtitle"></div>
+		   	    		<br />
+		   	    		<div id="buttonwrap">
+		   	    		<button class = "button" id = "confirm">Confirm</button>
+		   	    		<button class = "button" id = "cancelinput">Cancel</button>
+		   	    		</div>
+		   	    		</div>
+		   	    	</div>
+
+		   	    	<div id="weapons">
+		   	    		<div class="hl">Select a weapon</div>
+						<div id="weaponlist"></div>
+		   	    	</div>
+
+		   	    	<div id="items">
+		   	    		<div id="itemamount">Give <input type="text" id = "qty" class = "mtextareas" value="1" /> to <span class="playername"></span></div>
+		   	    		<div id="itemlist"></div>
+		   	    	</div>
+
+		   	    	<div id="vehicles">
+		   	    		<div class="hl">Spawn a vehicle</div>
+		   	    		<div id="vehiclelist">
+		   	    		</div>
+		   	    	</div>
+
+		   	    	<div id="bans">
+		   	    		<div class="sectiontitle">Banned Players</div>
+		   	    		<br />
+		   	    		<div id="banlist"></div>
+		   	    	</div>
+		</main>
+  	</div>
+	</div>
+</body>
+	</html>
+	

@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net452</TargetFramework>
+    <DebugType>embedded</DebugType>
+    <Configurations>Release;Debug</Configurations>
+    <AssemblyName>RedMenuClient.net</AssemblyName>
+    <TargetName>$(AssemblyName)</TargetName>
+    <RunPostBuildEvent>Always</RunPostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DefineConstants>TRACE;CLIENT</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>DEBUG;CLIENT</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\shared\classes\ConfigManager.cs" Link="shared\ConfigManager.cs" />
+    <Compile Include="..\shared\classes\PermissionsManager.cs" Link="shared\PermissionsManager.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+
+    <PackageReference Include="MenuAPI.RedM" Version="3.0.4" />
+
+    <Reference Include="Microsoft.CSharp" />
+    
+    <!-- currently hardcoded path as no nuget package for RedM exists yet -->
+    <Reference Include="CitizenFX.Core.Client">
+      <HintPath>vendor\cfx\CitizenFX.Core.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\Newtonsoft.Json.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="if exist &quot;$(SolutionDir)postbuild.cmd&quot; &quot;$(SolutionDir)postbuild.cmd&quot;" />
+  </Target>
+</Project>

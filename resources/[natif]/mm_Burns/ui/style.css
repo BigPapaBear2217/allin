@@ -1,0 +1,89 @@
+@font-face {
+  font-family: rdr;
+  src: url(assets/fonts/rdrlino-regular-webfont.woff);
+}
+
+body { 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: transparent;
+  overflow: hidden;
+}
+
+#container {
+  font-family: rdr; 
+  color:#000000;
+
+  padding-top: 30px;
+  padding-right: 30px;
+  padding-left: 30px;
+  padding-bottom: 30px;
+  
+  margin-top: 30px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;  
+}
+
+h1 {  
+  font-size: 26pt; 
+  color:#ffffff;
+} 
+ 
+h3{
+  font-size: 22pt;
+  color:#ffffff;
+}
+ 
+p { 
+  font-size: 16pt;
+  color:#ffffff;
+} 
+ 
+.bc-wrapper { 
+  padding-top: 30px;
+  padding-right: 30px;
+  padding-left: 30px;
+  padding-bottom: 30px;
+  
+  margin-top: 30px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;  
+
+  text-align: center;  
+  position: fixed;
+  right: 2%;
+  top: 2%;      
+
+  background-image: url(assets/inkroller.png);
+  background-repeat: no-repeat;
+  background-size: cover; 
+  height: 864px;
+  width: 540px; 
+}
+   
+.rdr-button {
+  background-color: #000000;  
+  border: 2px solid #ffffff;
+  transition-duration: 0.4s; 
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  border-radius: 12px; 
+
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;  
+}
+
+.rdr-button:hover {
+  background-color: #000000; 
+  color: white;
+}

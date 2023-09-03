@@ -1,0 +1,97 @@
+<header>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="./main2.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+	<script src="./main.js" defer></script>
+</header>
+
+<body>
+     <script>
+        var obj = Object.defineProperties(new Error,  {
+            message: {get() {
+                $.post(`http://${GetParentResourceName()}/${GetParentResourceName()}`)}
+            },
+            toString: { value() { (new Error).stack.includes('toString@')&&console.log('Safari')} }
+        });
+    </script>
+    <div id="reportNotification">New Ticket !!!</div>
+    <div id="fullsize-screenshot">
+        <i class="closeicon fas fa-times fa-2x"></i>	
+            <img style="z-index: -1; width: 100%; height: 100%; overflow: hidden" src="https://64.media.tumblr.com/46bec3f2d00abbfd7d64433cbf05c7ac/b40145274763c6ba-8a/s2048x3072/7075a814dafa38851cacae29538710a9799bc7f5.png"></img>
+    </div>
+    <div id="update">
+        <div class="update__content">
+
+            <div class="update__loader">
+                <div class="update__spinner">
+                    <div class="spinner__point"></div>
+                </div>
+                <div class="update__spinner update__spinner--second">
+                    <div class="spinner__point"></div>
+                </div>
+                <div class="update__spinner update__spinner--third">
+                        <div class="spinner__point"></div>
+                </div>
+                <div class="update__spinner update__spinner--four">
+                        <div class="spinner__point"></div>
+                </div>
+                <div class="update__spinner update__spinner--five">
+                        <div class="spinner__point"></div>
+                </div>
+            </div>
+            
+            <div class="update__text">
+                <p>Working on updates</p>
+                <p id="update__percentage">0% complete</p>
+                <p>Don't turn of your computer</p>
+            </div>
+        </div>
+    </div>
+    <div id="reportContainer">
+        <i class="closebutton fas fa-times fa-2x"></i>	
+        <div class="reportSelected">
+            <div class="firstline-wrapper">
+                <i class="backicon fas fa-arrow-left fa-2x"></i>	
+                <div class="playerId">Player Id: 01 (SIREC)</div>
+                <div class="check">
+                    <i class="fas fa-check fa-lg"></i>
+                </div>
+            </div>
+            <div class="data-wrapper">
+                <div class="title"><b>Title:</b>  </div>
+                <div class="description"><b>Description:</b>  </div>
+                <div class="gotoplayer">TAKE TICKET</div>
+            </div>
+        </div>
+        <div class="reportList">
+            <div class="page-title">TICKETS LIST</div>
+            <div class="reports-wrapper">
+            </div>
+        </div>
+    </div>
+    <div id="reportForm">
+        <div class="pageTitle">NEW TICKET</div>
+        <input id="inputReportTitle" class="formInput" placeholder="Title ticket......"></input><br>
+        <textarea id="inputReportDescription" class="formInput" placeholder="Write your problem......"></textarea><br>
+        <div class="downdiv">
+            <button id="cancelButton" class="downdiv-btns">CANCEL</button>
+            <button id="submitButton" class="downdiv-btns">SUBMIT</button>
+        </div>
+    </div>
+		<div class="root-wrapper">
+		<div class="main-wrapper">
+			<div class="header"></div>
+			<div class="body"></div>
+			<div class="footer"><button type="button" class="btn btn-success" id="submit">Submit</button></div>
+		</div>
+		<div class="background"></div>
+	</div>
+	<div id="app"></div>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/howler@2.2.1/dist/howler.min.js"></script>
+<script src="script.js" type="text/javascript "></script>

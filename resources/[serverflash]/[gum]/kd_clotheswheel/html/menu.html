@@ -1,0 +1,337 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <script type="text/javascript" src="raphael.min.js"></script>
+    <script type="text/javascript" src="wheelnav.min.js"></script>
+    <script type="text/javascript" src="nui://game/ui/jquery.js"></script>
+
+    <!-- Default CSS styles -->
+    <style>
+        @font-face {
+            font-family: crock;
+            src: url(crock.ttf);
+        }
+        * {
+            font-family:'crock';
+        }
+        ::selection {
+            color: none;
+            background: none;
+        }
+        /* For Mozilla Firefox */
+        ::-moz-selection {
+            color: none;
+            background: none;
+        }
+        body {
+            width: 100vw;
+            height: 100vh;
+            position: absolute;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+        }
+        #wheelDiv > svg {
+            width: 100%;
+            height: 100%;
+            z-index: 999;
+        }
+        #wheelDiv {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            margin: auto;
+            z-index: 999;
+        }
+        #wheelDivBG {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0.8;
+        }
+        #wheelDivBG img {
+            width: 90%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        #container {
+            display: none;
+            position: relative;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        #logo {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            --size: 26%;
+            width: var(--size);
+            height: var(--size);
+            transform: translate(-50%,-50%);
+            display: none;
+            text-align: center;
+            border-radius: 50%;
+            padding: 10%;
+            z-index: 999;
+        }
+        #logo .bg {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2;
+            opacity: 0.8;
+        }
+        #logo img {
+            height: 100%;
+        }
+        #logo .img {
+            position: relative;
+            z-index: 10;
+            width: 100%;
+            height: 100%;
+        }
+        #close {
+            color: white;
+            position: absolute;
+            font-weight: bold;
+            width: 30px;
+            height: 30px;
+            background-image: url(img/bg_center.png);
+            background-size: contain;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            top: 10%;
+            right: 10%;
+            z-index: 999;
+        }
+        #close img {
+            width: 60%;
+            height: 60%;
+        }
+    </style>
+
+    <!-- Javascript code -->
+    <script type="text/javascript">
+        var ImgValid = [];
+        var wheels;
+        var submenuActive = 0;
+        var pointerX = -1;
+        var pointerY = -1;
+        function checkImage(imageSrc, good, bad) {
+            var img = new Image();
+            img.onload = good; 
+            img.onerror = bad;
+            img.src = imageSrc;
+        }
+        $(function() {
+            document.onmousemove = function(event) {
+                pointerX = event.pageX;
+                pointerY = event.pageY;
+            }
+            window.addEventListener('message', function(event) {
+                // Initialize menu
+                if (event.data.type == "listImg") {
+                    for (const name in event.data.data) {
+                        checkImage('img/'+name+'.png', () => {
+                            ImgValid.push(name)
+                        })
+                    }
+                }
+                else if (event.data.type == 'init') {
+                    
+                    $('#logo').show();
+                    $('#container').show();
+                    // Set global keybind and resource name
+                    
+                    submenuActive = "";
+                    resourceName = event.data.resourceName
+                    numWheels = 0
+
+                    // Get wheel style settings
+                    wheelStyle = event.data.data.style;
+
+                    // Set wheel size
+                    var wheelSize = wheelStyle.sizePx;
+                    document.getElementById("container").style.width = wheelSize+"px";
+                    document.getElementById("container").style.height = wheelSize+"px";
+
+                    if (event.data.data.wheels[0].labels.length == 0) {
+                        return
+                    }
+
+                    wheels = new Array();
+                    
+                    // Create and initialize all wheels
+                    if (event.data.data.wheels[0].labels.length > 0) {
+                        for (var i = 0; i < event.data.data.wheels.length; i++) {
+                            // Create new wheelnav and add to array of wheels
+                            if (i == 0) {
+                                wheels[i] = new wheelnav('wheelDiv', null);
+                            }
+                            else {
+                                var place = -1
+                                if (i == 1)
+                                    place = event.data.data.wheels[0].labels.map(x => { return x.label; }).indexOf('neckwear');
+                                if (i == 2)
+                                    place = event.data.data.wheels[0].labels.map(x => { return x.label; }).indexOf('shirts_full');
+                                if (place == -1)
+                                    continue
+
+                                wheels[i] = new wheelnav('wheelDiv', wheels[0].raphael);
+                            }
+
+                            // Get wheel data from JSON and customize wheel
+                            wheelData = event.data.data.wheels[i];
+                            wheels[i].navAngle = 90;
+                            wheels[i].navItemsContinuous = true;
+                            wheels[i].sliceAngle = 360/wheelData.labels.length
+                            
+                            if (i > 0) {
+                                var AngleBase = wheels[0].sliceAngle
+                                wheels[i].navAngle = wheels[0].navAngle + AngleBase * (place) - AngleBase/(wheelData.labels.length*(2 - (wheelData.labels.length-2)))
+                                wheels[i].sliceAngle =  wheels[0].sliceAngle/wheelData.labels.length
+                            }
+
+                            wheels[i].clickModeRotate = false;
+                            wheels[i].slicePathFunction = slicePath().DonutSlice;
+                            wheels[i].slicePathCustom = slicePath().DonutSliceCustomization();
+                            wheels[i].sliceSelectedPathCustom = wheels[i].slicePathCustom;
+                            wheels[i].sliceInitPathCustom = wheels[i].slicePathCustom;
+                            wheels[i].slicePathCustom.minRadiusPercent = wheelData.minRadiusPercent;
+                            wheels[i].slicePathCustom.maxRadiusPercent = wheelData.maxRadiusPercent;
+                            wheels[i].sliceInitPathCustom = wheels[i].slicePathCustom;
+                            wheels[i].sliceHoverPathCustom = wheels[i].slicePathCustom;
+                            wheels[i].sliceSelectedPathCustom = wheels[i].slicePathCustom;
+                            wheels[i].slicePathAttr = { opacity: 0.01, fill: "black", stroke: "#111", "stroke-width": 0 };
+                            if (i > 0) {
+                                wheels[i].slicePathAttr.opacity = 0.8
+                            }
+                            //wheels[i].slicePathAttr = wheelStyle.slices.default;
+                            wheels[i].sliceHoverAttr = wheelStyle.slices.hover;
+                            wheels[i].sliceSelectedAttr = wheelStyle.slices.selected;
+                            wheels[i].titleWidth = wheelStyle.icons.width;
+                            wheels[i].titleHeight = wheelStyle.icons.height;
+                            wheels[i].titleAttr = wheelStyle.titles.default;
+                            wheels[i].titleHoverAttr = wheelStyle.titles.hover;
+                            wheels[i].titleSelectedAttr = wheelStyle.titles.selected;
+                            wheels[i].createWheel(wheelData.labels.map(x => {
+                                if (ImgValid.indexOf(x.label) != -1) {
+                                    return "imgsrc:img/"+x.label+".png";
+                                }
+                                return x.label
+                            }));
+                            
+                            wheelData.labels.forEach((element,index) => {
+                                if (element.active == false) {
+                                    wheels[i].navItems[index].navTitle[0].style.opacity = 0.5;
+                                }
+                            });
+                            // Clear selected items and add mouse functions
+                            for (var j = 0; j < wheels[i].navItems.length; j++) {
+                                // Clear selected
+                                wheels[i].navItems[j].selected = false;
+
+                                // Add events for both navSlice and navTitle
+                                const label = wheelData.labels[j]
+                                wheels[i].navItems[j].navSlice.mousedown(function () {
+                                    Clicked(label);
+                                });
+                                wheels[i].navItems[j].navTitle.mousedown(function () {
+                                    Clicked(label);
+                                });
+                            }
+
+                            // Refresh menu
+                            wheels[i].refreshWheel();
+                            numWheels ++;
+                        }
+                    } else {
+                        $('#container').hide();
+                    }
+                    HideAllSubMenus();
+                }
+                // Destroy menu
+                else if (event.data.type == 'destroy') {
+                    // Remove all wheels when they exist
+                    if ((typeof wheels !== 'undefined') && (typeof numWheels !== 'undefined')) {
+                        wheels.forEach((element) => {
+                            element.removeWheel();
+                        })
+                        delete wheels;
+                        delete numWheels;
+                    }
+                    $('#container').hide();
+                    $('#logo').hide();
+                    $.post('http://'+resourceName+'/mousePosition', JSON.stringify({pos: [pointerX/window.innerWidth, pointerY/window.innerHeight]}));
+                }
+            });
+            function Clicked(label) {
+                if (label.subMenuId != undefined) {
+                    DisplaySubmenu(label.subMenuId)
+                } else {
+                    $.post('http://'+resourceName+'/sliceclicked', JSON.stringify({category: label.category}));
+                }
+            }
+            function DisplaySubmenu(id) {
+                if (id == submenuActive) {
+                    HideAllSubMenus();
+                } else {
+                    HideAllSubMenus();
+                    submenuActive = id
+                    wheels[id].navItems.forEach(e => {
+                        e.navItem.forEach(item => {
+                            item.show()
+                        })
+                    })
+                }
+            }
+            function HideAllSubMenus() {
+                submenuActive = 0;
+                wheels.forEach((element,index) => {
+                    if (index > 0) {
+                        element.navItems.forEach(e => {
+                            e.navItem.forEach(item => {
+                                item.hide()
+                            })
+                        })
+                    }
+                })
+            }
+            window.addEventListener("keyup", function onEvent(event) {
+                // Close menu when key is released
+                if (event.key === "Escape") {
+                    $.post('http://'+resourceName+'/closemenu', JSON.stringify({}));
+                }
+            });
+            $('#close').click(function (e) {
+                $.post('http://'+resourceName+'/closemenu', JSON.stringify({}));
+            });
+            $('#logo').click(function (e) {
+                $.post('http://'+resourceName+'/closemenu', JSON.stringify({}));
+            });
+        });
+    </script>
+
+</head>
+<body>
+    <!-- HTML code -->
+    <div id="container">
+        <div id="wheelDivBG"><img src="img/bg_wheel.png"></div>
+        <div id='wheelDiv' data-wheelnav></div>
+        <div id='close'><img src="img/cross.png"></div>
+        <div id="logo">
+            <div class="bg"><img src="img/bg_center.png"></div>
+            <div class="img"><img src="logo.png"></div>
+        </div>
+    </div>
+    
+</body>
+</html>
